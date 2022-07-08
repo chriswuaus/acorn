@@ -3,7 +3,10 @@ class Start:
         self.display = 'X'
         self.grid_index = None
         self.msg = None
+        self.visits = 0
+
     def step(self, game):
+        self.visits += 1
         pass
     def __eq__(self, other):
         if self.display == "X":
@@ -14,6 +17,7 @@ class End:
         self.display = 'Y'
         self.grid_index = None
         self.msg = None
+        self.visits = 0
 
     def step(self, game):
         game.win = True 
@@ -23,8 +27,10 @@ class Air:
         self.display = ' '
         self.grid_index = None
         self.msg = None
+        self.visits = 0
 
     def step(self, game):
+        self.visits += 1
         pass
     
 
@@ -33,8 +39,10 @@ class Wall:
         self.display = '*'
         self.grid_index = None
         self.msg = None
+        self.visits = 0
 
     def step(self, game):
+        self.visits += 1
         game.bounce()
     
 
@@ -43,7 +51,9 @@ class Fire:
         self.display = 'F'
         self.grid_index = None
         self.msg = None
+        self.visits = 0
     def step(self, game):
+        self.visits += 1
         if game.player.num_water_buckets > 0:
             game.player.take_water()
             # change the Fire() cell to an Air() cell
@@ -60,8 +70,10 @@ class Water:
         self.display = 'W'
         self.grid_index = None
         self.msg = None
+        self.visits = 0
 
     def step(self, game):
+        self.visits += 1
         game.player.add_water()
         self.msg = "\nThank the Honourable Furious Forest, you've found a bucket of water!"
         # change the Water() cell to an Air() cell
@@ -72,13 +84,18 @@ class Teleport:
         self.display = num
         self.grid_index = grid_index
         self.msg = None
+        self.visits = 0
 
 
     def step(self, game):
         # prevents invalid inputs from teleporting the player 
         if game.player.invalid == True:
             pass
+
+        
+
         else:
+            self.visits += 1
             for cells in game.grid[0]:
                 for tele in cells:
 

@@ -2,6 +2,7 @@ from game import Game
 import os
 import sys
 
+
 if len(sys.argv) < 2:
     print("Usage: python3 run.py <filename> [play]")
     exit()

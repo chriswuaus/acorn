@@ -17,7 +17,8 @@ def read_lines(filename):
         f.close()
         return parsed_lines
     except FileNotFoundError:
-        exit("{} does not exist!".format(filename))
+        print("{} does not exist!".format(filename))
+        exit()
 
 def parse(lines):
     """Transform the input into a grid.

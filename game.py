@@ -54,8 +54,11 @@ class Game:
         if self.player.row < 0 or self.player.row == self.num_of_rows\
         or self.player.col < 0 or  self.player.col == self.num_of_cols:
             return False
+        else:
+            return True
 
     def finish_string(self):
+    
         move_string = ', '.join(self.move_recorder)
         finish_win = "\n\nYou conquer the treacherous maze set up by the Fire"\
         " Nation and reclaim the Honourable Furious Forest Throne, restoring"\
