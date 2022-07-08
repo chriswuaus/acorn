@@ -1,7 +1,7 @@
-Upload your code here. Ensure the files exist in the root directory.
-i.e. Make sure your python files are in the top most folder here.
+Ascii maze game
 
-Drag drop your files into the file tree or press the + sign to upload
-files.
+w = up
+a = left
+s = down
+d = right
 
-Double check the assignment sheet to ensure you have submitted everything required. 
