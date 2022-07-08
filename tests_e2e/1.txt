@@ -1,0 +1,7 @@
+Sample tests for the quadratic question! Replace this with your own tests!
+
+Test cases should be general.
+Test cases should represent normal usage by a player.
+Test cases should cover program operation from start to end.
+E2E test cases should be in a test folder with all the test cases labelled appropriately
+(e.g. 1.in , 1.out , 1.txt ) where the justification is in the corresponding text file.
